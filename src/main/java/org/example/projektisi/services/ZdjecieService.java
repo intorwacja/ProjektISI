@@ -24,4 +24,5 @@ public class ZdjecieService {
 
         return wszystkieZdjecia.stream().limit(4).collect(Collectors.toList());
     }
+
 }
