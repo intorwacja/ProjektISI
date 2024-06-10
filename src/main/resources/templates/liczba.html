@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Liczba</title>
+</head>
+<body>
+<h1>Dodaj liczby</h1>
+<form action="#" th:action="@{/liczba/add}" th:object="${liczba}" method="post">
+    <div>
+        <label for="liczba1">Liczba 1:</label>
+        <input type="number" id="liczba1" name="liczba1" th:field="*{liczba1}" required/>
+    </div>
+    <div>
+        <label for="liczba2">Liczba 2:</label>
+        <input type="number" id="liczba2" name="liczba2" th:field="*{liczba2}" required/>
+    </div>
+    <div>
+        <button type="submit">Dodaj</button>
+    </div>
+</form>
+
+<h2>Lista liczb</h2>
+<ul>
+    <li th:each="liczba : ${liczby}">
+        Liczba 1: <span th:text="${liczba.liczba1}"></span>, Liczba 2: <span th:text="${liczba.liczba2}"></span>
+    </li>
+</ul>
+</body>
+</html>
