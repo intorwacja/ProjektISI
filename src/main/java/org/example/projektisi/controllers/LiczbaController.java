@@ -27,9 +27,4 @@ public class LiczbaController {
         return "redirect:/liczba";
     }
 
-    @GetMapping("/imie")
-    public String imie() {
-        return "Dominik Waśniewski";
-    }
-
 }
